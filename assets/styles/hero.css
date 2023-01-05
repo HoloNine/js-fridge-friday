@@ -1,0 +1,43 @@
+/* HERO CSS STYLES */
+
+.hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.hero-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../images/bg-image.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.hero-container {
+  z-index: 6;
+  display: flex;
+  width: 100%;
+  color: #ffffff;
+}
+
+.hero-container .container {
+  display: flex;
+  align-items: center;
+}
+
+.hero-container-column-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}

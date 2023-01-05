@@ -1,8 +1,67 @@
 
+body, html {
+  width: 100%;
+}
+
 body {
   font-family: 'Jost', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5rem;
+  letter-spacing: 0.03em;
   color: #000000;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 4.11rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 3.247rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* ACTIONS */
+button.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  user-select: none;
+  overflow: visible;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+}
+
+button.button.button-primary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  height: 40px;
+  background: #5D9D53;
+  color: #ffffff;
+  border-radius: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  transition: all ease 1.5ms;
+}
+
+button.button.button-primary:hover {
+  background-color: #ffffff;
+  color: #5D9D53;
 }
