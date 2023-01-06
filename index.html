@@ -1,93 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fridge Friday</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fridge Friday</title>
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
 
-  <!-- BOOTSTRAP -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <!-- MAIN CSS FILES -->
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/navigation.css" />
+    <link rel="stylesheet" href="assets/styles/hero.css" />
+    <link rel="stylesheet" href="assets/styles/promo.css" />
+    <link rel="stylesheet" href="assets/styles/testimonials.css" />
 
-  <!-- MAIN CSS FILES -->
-  <link rel="stylesheet" href="assets/styles/main.css" />
-  <link rel="stylesheet" href="assets/styles/navigation.css" />
-  <link rel="stylesheet" href="assets/styles/hero.css" />
-  <link rel="stylesheet" href="assets/styles/promo.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <!-- sof: navigation -->
+    <nav class="navigation">navigation</nav>
+    <!-- eof: navigation -->
 
-<body>
-  <!-- sof: navigation -->
-  <nav class="navigation">navigation</nav>
-  <!-- eof: navigation -->
-
-  <!-- sof: hero -->
-  <div class="hero">
-    <!-- sof: hero container -->
-    <div class="hero-container">
-      <div class="container">
-        <div class="col-2">One of three columns</div>
-        <div class="col-6 hero-container-column-meta">
-          <h1>Welcome to Fridge Friday!</h1>
-          <p>
-            Don't let your leftover ingredients go to waste. We create recipes
-            based on the ingredients you have on hand, helping you reduce food
-            waste and increase flavor in your meals. Try it out now!
-          </p>
-          <button class="button button-primary">FIND OUT MORE</button>
+    <!-- sof: hero -->
+    <div class="hero">
+      <!-- sof: hero container -->
+      <div class="hero-container">
+        <div class="container">
+          <div class="col-2">One of three columns</div>
+          <div class="col-6 hero-container-column-meta">
+            <h1>Welcome to Fridge Friday!</h1>
+            <p>
+              Don't let your leftover ingredients go to waste. We create recipes
+              based on the ingredients you have on hand, helping you reduce food
+              waste and increase flavor in your meals. Try it out now!
+            </p>
+            <button class="button button-primary">FIND OUT MORE</button>
+          </div>
+          <div class="col"></div>
         </div>
-        <div class="col"></div>
       </div>
+      <!-- eof: hero container -->
+
+      <div class="hero-background"></div>
     </div>
-    <!-- eof: hero container -->
+    <!-- eof: hero -->
 
-    <div class="hero-background"></div>
-  </div>
-  <!-- eof: hero -->
+    <main id="main" role="main">
+      <!-- sof: search recipe -->
+      <section class="search-recipe">search recipe section</section>
+      <!-- eof: search recipe -->
 
-  <main id="main" role="main">
-    <!-- sof: search recipe -->
-    <section class="search-recipe">search recipe section</section>
-    <!-- eof: search recipe -->
+      <!-- sof: popular recipes -->
+      <section class="popular-recipes">popular recipes section</section>
+      <!-- eof: popular recipes -->
 
-    <!-- sof: popular recipes -->
-    <section class="popular-recipes">popular recipes section</section>
-    <!-- eof: popular recipes -->
+      <!-- sof: promo -->
+      <section class="promo">
+        <div class="promo-header">
+          <h1>Don't let your leftovers go to waste!</h1>
+        </div>
+        <div class="promo-text">
+          <p>
+            Are you looking for new and creative ways to use up your
+            ingredients? Fridge Friday can help!
+          </p>
+        </div>
+        <button class="button button-primary">GET RECIPE IDEAS</button>
+      </section>
+      <!-- eof: promo -->
 
-    <!-- sof: promo -->
-    <section class="promo">
+      <!-- sof: promo -->
+      <section class="testimonials">
+        <div class="container">
+          <div class="testimonials-header">
+            <h2>TESTIMONIALS</h2>
+          </div>
+          <div class="testimonials-text">
+            <p>
+              Check out what our users are saying about their experience with
+              Fridge Friday
+            </p>
+          </div>
+          <div class="testimonials-boxes-container">
+            <div class="testimonials-boxes col">
+              <img src="" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat, sed veniam, animi odio delectus nulla sequi aliquid
+                commodi ad reiciendis itaque illum dignissimos eaque quasi
+                laboriosam ipsam voluptatem temporibus? Cupiditate!
+              </p>
+            </div>
+            <div class="testimonials-boxes col">
+              <img src="" alt="" />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+                aliquid tempore, labore inventore deleniti ipsam? Mollitia,
+                dolorem. Fugiat voluptas, tempore, in quam ut necessitatibus eos
+                porro vel explicabo quia accusantium!
+              </p>
+            </div>
+            <div class="testimonials-boxes col">
+              <img src="" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                quibusdam quo, deserunt mollitia tenetur numquam atque non porro
+                aut. Ea vel eligendi veniam doloremque! Ullam voluptatibus
+                molestiae rem at sapiente!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- eof: promo -->
+    </main>
 
-      <div class="promo-header">
-        <h1>Don't let your leftovers go to waste!</h1>
-      </div>
-      <div class="promo-text">
-        <p>Are you looking for new and creative ways to use up your ingredients? Fridge Friday can help!</p>
-      </div>
-      <button class="button button-primary">GET RECIPE IDEAS</button>
+    <footer class="footer">footer</footer>
 
-    </section>
-    <!-- eof: promo -->
+    <!-- JQUERY & BOOTSTRAP -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- sof: promo -->
-    <section class="testimonials">testimonials section</section>
-    <!-- eof: promo -->
-  </main>
-
-  <footer class="footer">footer</footer>
-
-  <!-- JQUERY & BOOTSTRAP -->
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-
-  <!-- APP JS SCRIPT -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/app.js"></script>
-</body>
-
+    <!-- APP JS SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
