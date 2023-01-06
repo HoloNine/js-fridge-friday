@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/styles/main.css" />
     <link rel="stylesheet" href="assets/styles/navigation.css" />
     <link rel="stylesheet" href="assets/styles/hero.css" />
+    <link rel="stylesheet" href="assets/styles/search.css" />
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,7 +57,36 @@
 
     <main id="main" role="main">
       <!-- sof: search recipe -->
-      <section class="search-recipe">search recipe section</section>
+      <section class="search-recipe">
+        <div class="container">
+          <div class="search-recipe-meta">
+            <h2>What’s in your fridge?</h2>
+            <p>
+              Enter your ingredients separated by a comma to find delicious
+              recipe ideas. Fridge Freezer will do the rest !
+            </p>
+          </div>
+
+          <div class="search-recipe-form">
+            <form>
+              <div class="form-group">
+                <input
+                  class="search-recipe-form-input"
+                  type="text"
+                  placeholder="Enter your ingredients"
+                />
+                <button
+                  class="button search-recipe-form-button"
+                  type="submit"
+                  class=""
+                >
+                  FIND RECIPES
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
       <!-- eof: search recipe -->
 
       <!-- sof: popular recipes -->
