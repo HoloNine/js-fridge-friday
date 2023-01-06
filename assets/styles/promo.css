@@ -1,0 +1,28 @@
+.promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 96px 0px;
+    gap: 48px;
+
+
+
+    position: absolute;
+    width: 1440px;
+    height: 480px;
+    left: 1px;
+    top: 2490px;
+    color: white;
+    background: #211B18
+}
+
+.promo-header,
+.promo-text {
+    width: 50%;
+    text-align: center;
+}
+
+h2.promo {
+    font-family: poppins;
+}
