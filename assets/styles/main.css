@@ -58,10 +58,10 @@ button.button.button-primary {
   flex: none;
   order: 1;
   flex-grow: 0;
+  filter: saturate(0.6);
   transition: all ease 1.5ms;
 }
 
 button.button.button-primary:hover {
-  background-color: #ffffff;
-  color: #5D9D53;
+  filter: saturate(1);
 }
