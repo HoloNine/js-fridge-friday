@@ -1,20 +1,21 @@
+const searchRecipeFormInput = $(".search-recipe-form-input");
+const searchRecipeFormButton = $(".search-recipe-form-button");
+
+/**
+ * @description get the meals based on one ingredient
+ */
+const getMeal = (ingredient) => {
+  const url = buildApiUrl({ query: "ingredient", value: ingredient });
+  const method = "GET";
+
+  $.ajax({ url, method }).then((response) => {
+    const { meals } = response;
+  });
+};
+
+const getRandomMeals = () => {};
+
 const mealAPI = () => {
-  const searchRecipeFormInput = $(".search-recipe-form-input");
-  const searchRecipeFormButton = $(".search-recipe-form-button");
-
-  /**
-   * @description: get the meals based on one ingredient
-   */
-  const getMeal = (ingredient) => {
-    const url = buildApiUrl({ query: "ingredient", value: ingredient });
-    const method = "GET";
-
-    $.ajax({ url, method }).then((response) => {
-      const { meals } = response;
-      console.log(meals[0].idMeal);
-    });
-  };
-
   /**
    * @description search recipe form button handler
    */
