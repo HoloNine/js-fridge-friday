@@ -1,3 +1,102 @@
 .popular-recipes {
-  
+  background-image: url("../images/popular-recipe.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 96px 0px;
+}
+
+.popular-recipes .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.popular-recipes .popular-recipes-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 60%;
+}
+
+.popular-recipes .popular-recipes-meta h2,
+.popular-recipes .popular-recipes-meta p {
+  text-align: center;
+  color: #ffffff;
+}
+
+.popular-recipes-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.popular-recipes-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+}
+
+.popular-recipe-card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.popular-recipe-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+.popular-recipe-card-body .popular-recipe-card-title {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 0 0 1rem 0;
+}
+
+.popular-recipe-card-body .popular-recipe-card-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  border-bottom: 2px solid #5d9d53;
+}
+
+.popular-recipe-card-body .popular-recipe-card-description {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (min-width: 906px) {
+  .popular-recipes-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .popular-recipes-card {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .popular-recipes-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  .popular-recipes-card {
+    width: 33.33%;
+  }
 }
