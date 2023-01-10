@@ -22,5 +22,8 @@ const buildApiUrl = (props) => {
     case "lookup":
       return `${rootUrl}/filter.php?i=${value}`;
       break;
+    case "random":
+      return `${rootUrl}/randomselection.php`;
+      break;
   }
 };
