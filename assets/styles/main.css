@@ -1,10 +1,10 @@
-
-body, html {
+body,
+html {
   width: 100%;
 }
 
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5rem;
@@ -23,6 +23,12 @@ h2 {
   font-size: 3.247rem;
   font-weight: 700;
   line-height: 1.1;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 /* ACTIONS */
@@ -52,7 +58,7 @@ button.button.button-primary {
   align-items: center;
   padding: 8px 24px;
   height: 40px;
-  background: #5D9D53;
+  background: #5d9d53;
   color: #ffffff;
   border-radius: 20px;
   flex: none;
