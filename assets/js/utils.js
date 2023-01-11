@@ -20,7 +20,7 @@ const buildApiUrl = (props) => {
       return `${rootUrl}/filter.php?${query.at(0)}=${value}`;
       break;
     case "lookup":
-      return `${rootUrl}/filter.php?i=${value}`;
+      return `${rootUrl}/lookup.php?i=${value}`;
       break;
     case "random":
       return `${rootUrl}/randomselection.php`;

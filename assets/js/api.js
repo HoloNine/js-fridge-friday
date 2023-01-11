@@ -33,7 +33,26 @@ const mealAPI = () => {
   searchRecipeFormButton.on("click", searchRecipeFormButtonHandler);
   
 };
-ajax
+var ingredList = []
+$.ajax({
+  method: 'GET',
+  url: buildApiUrl({query:'lookup', value: 52850}) ,
+
+  
+     
+},
+).then (response=> {console.log(response); 
+  const objectMeasure = response.meals[0];
+  const measureList = Object.entries(objectMeasure)
+  for(let i = 1; i <= 3; i++) {
+    let key = '.strMeasure' + i;
+    ingredList.push(objectMeasure[key]);
+    console.log(ingredList)
+    console.log(measureList)
+  }
+  })
+
+
 
 
 var query = '1 egg, 1 carrot, 1 spoon dijon mustard'
@@ -90,3 +109,49 @@ $.ajax({
 
 }
 );
+
+function getNutritionFacts(queryParam) {
+  $.ajax({
+    method: 'GET',
+    url: 'https://api.calorieninjas.com/v1/nutrition?query=' + queryParam,
+    headers: { 'X-Api-Key': '6V6g3LwVQnMlDJmfDz23Mw==tbEtLG245HDEo7Cn' },
+    contentType: 'application/json',
+    success: function (result) {
+        console.log(result);
+        for (i = 0; i < result.items.length; i++) {
+            totalCal += result.items[i].calories
+            totalSugar += result.items[i].sugar_g;
+            totalCarb += result.items[i].carbohydrates_total_g
+            totalChol += result.items[i].cholesterol_mg
+            totalSat += result.items[i].fat_saturated_g
+            totalFat += result.items[i].fat_total_g
+            totalFiber += result.items[i].fiber_g
+            totalPot += result.items[i].potassium_mg
+            totalProtein += result.items[i].protein_g
+            totalSize += result.items[i].serving_size_g
+            totalSodium += result.items[i].sodium_mg
+  }
+        console.log("Calories: " + totalCal.toFixed(1) + "kcal")
+        console.log("Sugar: " + totalSugar.toFixed(1) + "g");
+        console.log("Carbohydrates: " + totalCarb.toFixed(1) + "g");
+        console.log("Cholesterol: " + totalChol.toFixed(1) + "mg");
+        console.log("Saturated Fat: " + totalSat.toFixed(1) + "g");
+        console.log("Fat: " + totalFat.toFixed(1) + "g");
+        console.log("Fibre: " + totalFiber.toFixed(1) + "g");
+        console.log("Potassium: " + totalPot.toFixed(1) + "mg");
+        console.log("Protein: " + totalProtein.toFixed(1) + "g");
+        console.log("Serving Size: " + totalSize.toFixed(1) + "g");
+        console.log("Sodium: " + totalSodium.toFixed(1) + "mg");
+    },
+  
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    },
+  
+  
+  
+  
+  }
+  );
+  }
+  getNutritionFacts("sushi") 
