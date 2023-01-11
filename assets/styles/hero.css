@@ -8,7 +8,16 @@
   z-index: 1;
 }
 
-.hero-background {
+.hero-search {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  z-index: 1;
+}
+
+.hero-background,
+.hero-background-search {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -16,7 +25,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg-image.webp");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/bg-image.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,5 +75,5 @@
 }
 
 .social-icon a:hover {
-  color: #5D9D53;
+  color: #5d9d53;
 }
