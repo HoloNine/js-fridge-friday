@@ -14,6 +14,27 @@ const getMeal = (ingredient) => {
   });
 };
 
+const buildRandomMealHero = (props) => {
+  const { idMeal, strMeal, strInstructions, strMealThumb } = props;
+
+  const strInstructionsSubstring = strInstructions.substring(0, 240);
+
+  const heroBackground = $(".hero-background");
+  const heroTitle = $(".hero-title");
+  const heroText = $(".hero-text");
+  const heroButton = $(".hero-button");
+
+  heroBackground.css({
+    background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("${strMealThumb}")`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  });
+
+  heroTitle.text(strMeal);
+  heroText.text(`${strInstructionsSubstring}...`);
+  heroButton.attr("id", idMeal);
+};
+
 const buildRandomMealCard = (props) => {
   const { idMeal, strMeal, strInstructions, strMealThumb } = props;
 
@@ -49,18 +70,28 @@ const buildRandomMealCard = (props) => {
   popularRecipesWrapper.append(popularRecipeCard);
 };
 
-const getRandomMeals = () => {
+const getRandomMeals = (numberOfMeals) => {
   const url = buildApiUrl({ query: "random", value: null });
   const method = "GET";
 
-  const recentRecipeCount = Array.from({ length: 3 }, (value, index) => index);
+  const recentRecipeCount = Array.from(
+    { length: numberOfMeals },
+    (value, index) => index
+  );
 
-  recentRecipeCount.forEach(() => {
+  if (!numberOfMeals) {
     $.ajax({ url, method }).then((response) => {
       const { meals } = response;
-      buildRandomMealCard(...meals);
+      buildRandomMealHero(...meals);
     });
-  });
+  } else {
+    recentRecipeCount.forEach(() => {
+      $.ajax({ url, method }).then((response) => {
+        const { meals } = response;
+        buildRandomMealCard(...meals);
+      });
+    });
+  }
 };
 
 const mealAPI = () => {
