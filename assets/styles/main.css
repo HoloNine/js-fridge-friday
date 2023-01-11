@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: "Jost", sans-serif;
   font-size: 18px;
   font-weight: 400;

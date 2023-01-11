@@ -1,3 +1,17 @@
+// If exists return searchHistory object from localStorage
+const getSearchHistory = () => {
+  const searchHistory = JSON.parse(localStorage.getItem("meals"));
+  if (!searchHistory) {
+    return;
+  }
+  return searchHistory;
+};
+
+// Add item to localStorage
+const setSearchHistory = (meals) => {
+  return localStorage.setItem("meals", JSON.stringify(meals));
+};
+
 /**
  * @description build the api url
  * @param {*} props
