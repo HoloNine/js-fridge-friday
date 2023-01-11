@@ -47,9 +47,10 @@ $.ajax({
   for(let i = 1; i <= 3; i++) {
     let key = '.strMeasure' + i;
     ingredList.push(objectMeasure[key]);
-    console.log(ingredList)
+    // console.log(ingredList)
     console.log(measureList)
   }
+  console.log(measureList[10].strIngredient2[1])
   })
 
 
@@ -154,4 +155,4 @@ function getNutritionFacts(queryParam) {
   }
   );
   }
-  getNutritionFacts("sushi") 
+  getNutritionFacts("chicken curry") 
