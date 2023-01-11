@@ -98,7 +98,13 @@ $.ajax({
     // console.log(ingredList)
     console.log(measureList)
   }
-  console.log(measureList[10].strIngredient2[1])
+  for (i=0; i<20;i++) {
+  console.log(measureList[29+i][1])
+  console.log(measureList[9+i][1])
+  ingredList.push(measureList[29+i][1])
+  ingredList.push(measureList[9+i][1])
+  console.log(ingredList)
+  }
   })
 
 
@@ -203,4 +209,4 @@ function getNutritionFacts(queryParam) {
   }
   );
   }
-  getNutritionFacts("chicken curry") 
+  getNutritionFacts(toString(ingredList)) 
