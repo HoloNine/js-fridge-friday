@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  getRandomMeals();
+  const randomMealHeroPainting = getRandomMeals();
+  const randomMealsPainting = getRandomMeals(3);
   mealAPI();
 });
