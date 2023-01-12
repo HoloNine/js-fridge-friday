@@ -65,6 +65,7 @@ const mealAPI = () => {
   
 };
 var ingredList = []
+var listIng = 
 $.ajax({
   method: 'GET',
   url: buildApiUrl({query:'lookup', value: 52850}) ,
@@ -74,7 +75,7 @@ $.ajax({
 },
 ).then (response=> {console.log(response); 
   const objectMeasure = response.meals[0];
-  const measureList = Object.entries(objectMeasure)
+  const measureList = Object.values(objectMeasure)
   for(let i = 1; i <= 3; i++) {
     let key = '.strMeasure' + i;
     // ingredList.push(objectMeasure[key]);
@@ -84,10 +85,14 @@ $.ajax({
   for (i=0; i<20;i++) {
   // console.log(measureList[29+i][1])
   // console.log(measureList[9+i][1])
-  ingredList.push(measureList[29+i][1])
-  ingredList.push(measureList[9+i][1])
+  ingredList.push(measureList[29+i])
+  ingredList.push(measureList[9+i])
   // console.log(ingredList)
   }
+  console.log(measureList[9])
+  listIng = "'" + measureList[29] + " " + measureList[9] + " " + measureList[30] + " " + measureList[10] + " " + measureList[31] + " " + measureList[11] + " " + measureList[32] + " " + measureList[12] + " " + measureList[33] + " " + measureList[13] + " " + measureList[34] + " " + measureList[14] + " " + measureList[35] + " " + measureList[15] + " " + measureList[36] + " " + measureList[16] + " " + measureList[37] + " " + measureList[17] + "'"
+  console.log(listIng)
+  getNutritionFacts(listIng)
   })
   console.log(ingredList.join(" "))
 
@@ -196,11 +201,8 @@ function getNutritionFacts(queryParam) {
   
   var strList = ingredList.toString();
   console.log(strList)
-  getNutritionFacts(ingredList) 
+  getNutritionFacts(listIng)
+  console.log(listIng)
 
-  for (i=0; i<40; i++) {
-    
-    var ingredListStr = ingredList[i]
-    
-    console.log(ingredListStr)
-  }
+
+  
