@@ -1,6 +1,16 @@
 # js-fridge-friday
-User Story:
+Concept:
+Create a tool to help reduce food waste and save money by providing inspiration to use up ingredients left over at the end of the week.
 
-As a user I want to be able to search an ingredient I have left at the end of the week and find a selection of recipes to use it up.
+User:
+The user can search an ingredient to get a choice of recipes using that ingredient
+The user can chose a recipe then get nutritonal infor mation for that chosen recipe
 
-As a user I then want to be able to check the nutrition for the meal I choose.
+
+Fridge Friday Team:
+Marius Paduraru
+Matthew Osborne
+Alexandru Dumitru
+Kirsten Heslop
+
+LICENCE: MIT
