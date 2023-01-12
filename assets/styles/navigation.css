@@ -42,7 +42,7 @@
 /* Media queries */
 @media (min-width: 600px) {
   .menulinks a {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .logo img {
@@ -79,5 +79,22 @@
 
   .menulinks a {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation .container-fluid {
+    padding-top: 15px;
+    gap: 25px;
+  }
+
+  .menulinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .logo img {
+    width: 70px;
   }
 }
