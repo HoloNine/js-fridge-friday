@@ -1,6 +1,7 @@
 /* HERO CSS STYLES */
 
-.hero {
+.hero,
+.hero-meal {
   position: relative;
   display: flex;
   width: 100%;
@@ -19,6 +20,7 @@
 }
 
 .hero-background,
+.hero-meal-background,
 .hero-background-search {
   position: absolute;
   width: 100%;
@@ -35,17 +37,29 @@
   z-index: 3;
 }
 
-.hero-container {
+.hero-container,
+.hero-meal-container {
   z-index: 6;
   display: flex;
   width: 100%;
   color: #ffffff;
 }
 
-.hero-container .container {
+.hero-container .container,
+.hero-meal-container .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.hero-meal-container h1,
+.hero-meal-container p {
+  text-align: center;
+}
+
+.hero-meal-container .container .row {
+  justify-content: center;
+  display: flex;
 }
 
 .hero-container-column-meta {
@@ -53,6 +67,14 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
+}
+
+.hero--meal-container-column-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 69%;
 }
 
 .social {

@@ -81,6 +81,28 @@ const buildRandomMealHero = (props) => {
 };
 
 /**
+ * @description render the hero image, title and text
+ */
+const buildMealHero = (props) => {
+  const { strMeal, strInstructions, strMealThumb } = props;
+
+  const strInstructionsSubstring = strInstructions.substring(0, 240);
+
+  const heroBackground = $(".hero-meal-background");
+  const heroTitle = $(".hero-title");
+  const heroText = $(".hero-text");
+
+  heroBackground.css({
+    background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("${strMealThumb}")`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  });
+
+  heroTitle.text(strMeal);
+  heroText.text(`${strInstructionsSubstring}...`);
+};
+
+/**
  * @description render a custom meal card
  */
 const buildRandomMealCard = (props) => {

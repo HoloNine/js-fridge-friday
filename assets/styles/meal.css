@@ -1,0 +1,45 @@
+.meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 0px;
+  gap: 48px;
+  color: white;
+  background: #211b18;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+}
+
+.meal-ingredients {
+  padding: 48px 96px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.meal-ingredients h6 {
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #000000;
+  padding-bottom: 16px;
+}
+
+.meal-ingredients h6:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  border-bottom: 2px solid #000000;
+}

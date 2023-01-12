@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/styles/promo.css" />
     <link rel="stylesheet" href="assets/styles/testimonials.css" />
     <link rel="stylesheet" href="assets/styles/footer.css" />
+    <link rel="stylesheet" href="assets/styles/meal.css" />
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,27 +46,39 @@
     <!-- eof: navigation -->
 
     <!-- sof: hero -->
-    <div class="hero-search" id="search">
+    <div class="hero-meal" id="home">
       <!-- sof: hero container -->
-      <div class="hero-container">
+      <div class="hero-meal-container">
         <div class="container">
           <div class="row">
-            <div class="col hero-container-column-meta">
-              <h1 class="hero-title-search-page">Meal</h1>
+            <div class="col hero--meal-container-column-meta">
+              <h1 class="hero-title">Welcome to Fridge Friday!</h1>
+              <p class="hero-text">
+                Don't let your leftover ingredients go to waste. We create
+                recipes based on the ingredients you have on hand, helping you
+                reduce food waste and increase flavor in your meals. Try it out
+                now!
+              </p>
             </div>
           </div>
         </div>
       </div>
       <!-- eof: hero container -->
 
-      <div class="hero-background-search"></div>
+      <div class="hero-meal-background"></div>
     </div>
     <!-- eof: hero -->
 
     <main id="main" role="main">
       <!-- sof: popular recipes -->
       <section class="meal">
-        <div class="container"></div>
+        <div class="container">
+          <div class="col-4 meal-ingredients">
+            <h6>Ingredients</h6>
+            <div class="meal-ingredients-list"></div>
+          </div>
+          <div class="col-8 meal-instructions">instructions</div>
+        </div>
       </section>
       <!-- eof: popular recipes -->
     </main>
@@ -110,5 +123,6 @@
     <!-- APP JS SCRIPT -->
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/api.js"></script>
+    <script src="assets/js/meal.js"></script>
   </body>
 </html>
