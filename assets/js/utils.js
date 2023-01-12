@@ -53,8 +53,12 @@ const buildApiUrl = (props) => {
     case "random":
       return `${rootUrl}/randomselection.php`;
       break;
+    case "multiple":
+      return `${rootUrl}/filter.php?i=${value}`;
   }
 };
+
+// www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast,garlic,salt
 
 /**
  * @description render the hero image, title and text
