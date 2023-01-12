@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const searchMeal = getSearchMeal();
   buildMealHero(searchMeal);
+
+  const { idMeal } = searchMeal;
+
   const ingredientWrapper = $(".meal-ingredients-list");
   const mealKeys = Object.keys(searchMeal);
 
