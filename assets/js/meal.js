@@ -16,4 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   console.log(mealIngredients);
+  getMealId(idMeal)
 });
+
+

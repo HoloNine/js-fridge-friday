@@ -66,20 +66,22 @@ const mealAPI = () => {
   
 };
 // Variable for containing string of ingredients
-var listIng = 
+var listIng = ""
 // Gets ingredients and measurements from mealDB API
-$.ajax({
-  method: 'GET',
-  url: buildApiUrl({query:'lookup', value: 53058}) ,    
-},
-).then (response=> {console.log(response); 
-  const objectMeasure = response.meals[0];
-  const measureList = Object.values(objectMeasure)
-  listIng = "'" + measureList[29] + " " + measureList[9] + " " + measureList[30] + " " + measureList[10] + " " + measureList[31] + " " + measureList[11] + " " + measureList[32] + " " + measureList[12] + " " + measureList[33] + " " + measureList[13] + " " + measureList[34] + " " + measureList[14] + " " + measureList[35] + " " + measureList[15] + " " + measureList[36] + " " + measureList[16] + " " + measureList[37] + " " + measureList[17] + "'"
-  console.log(listIng)
-  getNutritionFacts(listIng)
-  })
-  
+
+  function getMealId(id) {
+    $.ajax({
+      method: 'GET',
+      url: buildApiUrl({query:'lookup', value: id}) ,    
+    },
+    ).then (response=> {console.log(response); 
+      const objectMeasure = response.meals[0];
+      const measureList = Object.values(objectMeasure)
+      listIng = "'" + measureList[29] + " " + measureList[9] + " " + measureList[30] + " " + measureList[10] + " " + measureList[31] + " " + measureList[11] + " " + measureList[32] + " " + measureList[12] + " " + measureList[33] + " " + measureList[13] + " " + measureList[34] + " " + measureList[14] + " " + measureList[35] + " " + measureList[15] + " " + measureList[36] + " " + measureList[16] + " " + measureList[37] + " " + measureList[17] + "'"
+      console.log(listIng)
+      getNutritionFacts(listIng)
+      })
+  }
 // Vars for nutritional information
 var totalCal = 0;
 var totalSugar = 0;
