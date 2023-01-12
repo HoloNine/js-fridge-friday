@@ -4,8 +4,9 @@
 
 ## `CONCEPT:`
 
-    Create a tool to help reduce food waste and save money by providing inspiration to use up ingredients left over at the end of the week.
-    __
+Create a tool to help reduce food waste and save money by providing inspiration to use up ingredients left over at the end of the week.
+
+\_\_
 
 :link: [Demo URL](https://wisethee.github.io/js-fridge-friday/)
 
@@ -13,13 +14,15 @@
 
 ## `FEATURES:`
 
-    This app uses the TheMealDB API to fetch recipes and CalorieNinjas API to fetch nutrition information. The user can search an ingredient to get a choice of recipes using that ingredient and can chose a recipe then get nutritional information for that chosen recipe.
-    __
+This app uses the TheMealDB API to fetch recipes and CalorieNinjas API to fetch nutrition information. The user can search an ingredient to get a choice of recipes using that ingredient and can chose a recipe then get nutritional information for that chosen recipe.
+
+\_\_
 
 ## `FRIDGE FRIDAY TEAM:`
 
-    Kirsten Heslop, Marius Paduraru, Matthew Osborne, Alexandru Dumitru
-    __
+Kirsten Heslop, Marius Paduraru, Matthew Osborne, Alexandru Dumitru
+
+\_\_
 
 `License: This project is open source and available under the [MIT License](LICENSE).`
 
