@@ -1,3 +1,9 @@
+.navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+
 .navigation .container-fluid {
   display: flex;
   flex-direction: row;
@@ -30,7 +36,7 @@
 }
 
 .nav-link:hover {
-  color: #5D9D53;
+  color: #5d9d53;
 }
 
 /* Media queries */

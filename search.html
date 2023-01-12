@@ -34,13 +34,13 @@
   <body>
     <!-- sof: navigation -->
     <nav class="navigation">
-      <ul class="nav mainmenu">
-        <li class="nav-item">
+      <div class="container-fluid">
+        <div class="col-2 logo">
           <a class="nav-link" href="#home"
-            ><img src="./assets/images/logo.webp" width="100px"
+            ><img src="./assets/images/logo.webp"
           /></a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
     <!-- eof: navigation -->
 
@@ -63,9 +63,20 @@
     <!-- eof: hero -->
 
     <main id="main" role="main">
-      <!-- sof: page-search section -->
-      <section class="page-search">search wrapper</section>
-      <!-- eof: page-search section -->
+      <!-- sof: popular recipes -->
+      <section class="popular-recipes">
+        <div class="container">
+          <div class="popular-recipes-meta">
+            <h2>Popular Recipes</h2>
+            <p>
+              These recipes have proven to be fan favorites, and we are sure
+              they will be a hit with you and your loved ones as well.
+            </p>
+          </div>
+          <div class="popular-recipes-wrapper"></div>
+        </div>
+      </section>
+      <!-- eof: popular recipes -->
     </main>
 
     <footer class="footer">
@@ -108,6 +119,6 @@
     <!-- APP JS SCRIPT -->
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/api.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/search.js"></script>
   </body>
 </html>
