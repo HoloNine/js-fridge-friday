@@ -1,0 +1,33 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 0px;
+  gap: 48px;
+
+  color: white;
+  background: #211b18;
+}
+
+.promo-header,
+.promo-text {
+  width: 50%;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .promo-header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo-header {
+    width: 100%;
+  }
+
+  .promo-header h1 {
+    font-size: 50px;
+  }
+}

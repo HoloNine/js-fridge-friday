@@ -1,0 +1,175 @@
+.meal,
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 0px;
+  gap: 48px;
+  color: white;
+  background: #211b18;
+}
+
+.nutrition {
+  padding: 0px 0px 96px;
+}
+
+.container {
+  display: flex;
+  gap: 48px;
+}
+
+.meal-ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px 96px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.meal-ingredients h6 {
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #000000;
+  padding-bottom: 24px;
+}
+
+.meal-ingredients h6:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  border-bottom: 2px solid #000000;
+}
+
+.meal-ingredients-list .ingredient {
+  padding: 16px 0;
+}
+
+.ingredient {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.ingredient span.circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  border-radius: 16px;
+}
+
+.meal-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.meal-instructions h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.nutrition-facts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.nutrition-facts h6 {
+  position: relative;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 24px;
+  color: #ffffff;
+}
+
+.nutrition-facts h6:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  border-bottom: 2px solid #ffffff;
+}
+
+.nutrition-facts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.nutrition-facts-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  gap: 24px;
+}
+
+.nutrition-item {
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nutrition-facts .nutrition-item-header,
+.nutrition-facts .nutrition-item-body {
+  padding: 20px;
+}
+
+.nutrition-facts .nutrition-item-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nutrition-facts .nutrition-item-body {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height, or 117% */
+
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+
+.nutrition-item-header {
+  border-bottom: 1px solid #ffffff;
+}
