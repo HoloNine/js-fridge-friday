@@ -65,11 +65,12 @@ const mealAPI = () => {
   searchRecipeFormButton.on("click", searchRecipeFormButtonHandler);
   
 };
-var ingredList = []
+// Variable for containing string of ingredients
 var listIng = 
+// Gets ingredients and measurements from mealDB API
 $.ajax({
   method: 'GET',
-  url: buildApiUrl({query:'lookup', value: 53059}) ,    
+  url: buildApiUrl({query:'lookup', value: 53058}) ,    
 },
 ).then (response=> {console.log(response); 
   const objectMeasure = response.meals[0];
@@ -79,7 +80,7 @@ $.ajax({
   getNutritionFacts(listIng)
   })
   
-var query = '1 egg, 1 carrot, 1 spoon dijon mustard'
+// Vars for nutritional information
 var totalCal = 0;
 var totalSugar = 0;
 var totalCarb = 0;
