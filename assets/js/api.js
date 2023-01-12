@@ -68,7 +68,7 @@ var ingredList = []
 var listIng = 
 $.ajax({
   method: 'GET',
-  url: buildApiUrl({query:'lookup', value: 52850}) ,
+  url: buildApiUrl({query:'lookup', value: 53065}) ,
 
   
      
