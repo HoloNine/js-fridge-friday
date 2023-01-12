@@ -16,7 +16,7 @@
 
 .container {
   display: flex;
-  gap: 24px;
+  gap: 48px;
 }
 
 .meal-ingredients {

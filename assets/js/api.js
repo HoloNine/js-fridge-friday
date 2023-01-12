@@ -114,7 +114,7 @@ function getMealId(id) {
       " " +
       measureList[17] +
       "'";
-    // console.log(listIng)
+    // console.log(listIng);
     getNutritionFacts(listIng);
   });
 }
