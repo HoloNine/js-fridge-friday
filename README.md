@@ -22,3 +22,6 @@
     __
 
 `License: This project is open source and available under the [MIT License](LICENSE).`
+
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/Naereen/badges.svg)](https://github.com/wisethee/js-fridge-friday/graphs/contributors)
