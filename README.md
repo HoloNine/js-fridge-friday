@@ -7,7 +7,7 @@
     Create a tool to help reduce food waste and save money by providing inspiration to use up ingredients left over at the end of the week.
     __
 
-[Demo URL](https://wisethee.github.io/js-fridge-friday/)
+:link: [Demo URL](https://wisethee.github.io/js-fridge-friday/)
 
 ![Screenshot](https://github.com/wisethee/js-fridge-friday/blob/feat/marius/assets/images/cover.jpg?raw=true)
 
