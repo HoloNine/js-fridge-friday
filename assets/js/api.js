@@ -69,36 +69,16 @@ var ingredList = []
 var listIng = 
 $.ajax({
   method: 'GET',
-  url: buildApiUrl({query:'lookup', value: 53065}) ,
-
-  
-     
+  url: buildApiUrl({query:'lookup', value: 53059}) ,    
 },
 ).then (response=> {console.log(response); 
   const objectMeasure = response.meals[0];
   const measureList = Object.values(objectMeasure)
-  for(let i = 1; i <= 3; i++) {
-    let key = '.strMeasure' + i;
-    // ingredList.push(objectMeasure[key]);
-    // console.log(ingredList)
-    console.log(measureList)
-  }
-  for (i=0; i<20;i++) {
-  // console.log(measureList[29+i][1])
-  // console.log(measureList[9+i][1])
-  ingredList.push(measureList[29+i])
-  ingredList.push(measureList[9+i])
-  // console.log(ingredList)
-  }
-  console.log(measureList[9])
   listIng = "'" + measureList[29] + " " + measureList[9] + " " + measureList[30] + " " + measureList[10] + " " + measureList[31] + " " + measureList[11] + " " + measureList[32] + " " + measureList[12] + " " + measureList[33] + " " + measureList[13] + " " + measureList[34] + " " + measureList[14] + " " + measureList[35] + " " + measureList[15] + " " + measureList[36] + " " + measureList[16] + " " + measureList[37] + " " + measureList[17] + "'"
   console.log(listIng)
   getNutritionFacts(listIng)
   })
-  console.log(ingredList.join(" "))
-
-
-
+  
 var query = '1 egg, 1 carrot, 1 spoon dijon mustard'
 var totalCal = 0;
 var totalSugar = 0;
@@ -111,48 +91,6 @@ var totalPot = 0;
 var totalProtein = 0;
 var totalSize = 0;
 var totalSodium = 0;
-// $.ajax({
-//     method: 'GET',
-//     url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
-//     headers: { 'X-Api-Key': '6V6g3LwVQnMlDJmfDz23Mw==tbEtLG245HDEo7Cn' },
-//     contentType: 'application/json',
-//     success: function (result) {
-//         console.log(result);
-//         for (i = 0; i < result.items.length; i++) {
-//             totalCal += result.items[i].calories
-//             totalSugar += result.items[i].sugar_g;
-//             totalCarb += result.items[i].carbohydrates_total_g
-//             totalChol += result.items[i].cholesterol_mg
-//             totalSat += result.items[i].fat_saturated_g
-//             totalFat += result.items[i].fat_total_g
-//             totalFiber += result.items[i].fiber_g
-//             totalPot += result.items[i].potassium_mg
-//             totalProtein += result.items[i].protein_g
-//             totalSize += result.items[i].serving_size_g
-//             totalSodium += result.items[i].sodium_mg
-// }
-//         console.log("Calories: " + totalCal.toFixed(1) + "kcal")
-//         console.log("Sugar: " + totalSugar.toFixed(1) + "g");
-//         console.log("Carbohydrates: " + totalCarb.toFixed(1) + "g");
-//         console.log("Cholesterol: " + totalChol.toFixed(1) + "mg");
-//         console.log("Saturated Fat: " + totalSat.toFixed(1) + "g");
-//         console.log("Fat: " + totalFat.toFixed(1) + "g");
-//         console.log("Fibre: " + totalFiber.toFixed(1) + "g");
-//         console.log("Potassium: " + totalPot.toFixed(1) + "mg");
-//         console.log("Protein: " + totalProtein.toFixed(1) + "g");
-//         console.log("Serving Size: " + totalSize.toFixed(1) + "g");
-//         console.log("Sodium: " + totalSodium.toFixed(1) + "mg");
-//     },
-
-//     error: function ajaxError(jqXHR) {
-//         console.error('Error: ', jqXHR.responseText);
-//     },
-
-
-
-
-// }
-// );
 
 function getNutritionFacts(queryParam) {
   $.ajax({
@@ -161,7 +99,7 @@ function getNutritionFacts(queryParam) {
     headers: { 'X-Api-Key': '6V6g3LwVQnMlDJmfDz23Mw==tbEtLG245HDEo7Cn' },
     contentType: 'application/json',
     success: function (result) {
-        console.log(result);
+        // console.log(result);
         for (i = 0; i < result.items.length; i++) {
             totalCal += result.items[i].calories
             totalSugar += result.items[i].sugar_g;
@@ -192,18 +130,11 @@ function getNutritionFacts(queryParam) {
         console.error('Error: ', jqXHR.responseText);
     },
   
-  
-  
-  
   }
   );
   }
-  console.log(ingredList);
   
-  var strList = ingredList.toString();
-  console.log(strList)
-  getNutritionFacts(listIng)
-  console.log(listIng)
+  
 
 
   
