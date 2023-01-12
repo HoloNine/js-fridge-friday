@@ -16,5 +16,18 @@
   text-align: center;
 }
 
-h2.promo {
+@media (min-width: 600px) {
+  .promo-header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo-header {
+    width: 100%;
+  }
+
+  .promo-header h1 {
+    font-size: 50px;
+  }
 }

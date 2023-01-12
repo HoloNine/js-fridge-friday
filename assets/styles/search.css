@@ -24,7 +24,8 @@
   text-align: center;
 }
 
-.search-recipe h2, .search-recipe p {
+.search-recipe h2,
+.search-recipe p {
   color: #ffffff;
 }
 
@@ -72,4 +73,31 @@
 
 .search-recipe-form .form-group .search-recipe-form-button:hover {
   filter: saturate(1);
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  .search-recipe-meta {
+    width: 100%;
+  }
+
+  .search-recipe-form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 906px) {
+  .search-recipe-form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-recipe-meta {
+    width: 100%;
+  }
+
+  .search-recipe-form {
+    width: 100%;
+  }
 }
