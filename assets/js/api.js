@@ -1,6 +1,21 @@
 const searchRecipeFormInput = $(".search-recipe-form-input");
 const searchRecipeFormButton = $(".search-recipe-form-button");
 const popularRecipesWrapper = $(".popular-recipes-wrapper");
+const nutritionItems = $(".nutrition-facts-list");
+
+const buildNutritionItem = (props) => {
+  const { factor, title, unit } = props;
+
+  const nutritionItem = $("<div>").addClass("nutrition-item");
+  const nutritionItemHeader = $("<div>").addClass("nutrition-item-header");
+  const nutritionItemBody = $("<div>").addClass("nutrition-item-body");
+
+  nutritionItemHeader.text(title);
+  nutritionItemBody.text(`${factor}${unit}`);
+  nutritionItem.append(nutritionItemHeader);
+  nutritionItem.append(nutritionItemBody);
+  nutritionItems.append(nutritionItem);
+};
 
 /**
  * @description get the meals based on one ingredient
@@ -114,7 +129,6 @@ function getMealId(id) {
       " " +
       measureList[17] +
       "'";
-    // console.log(listIng);
     getNutritionFacts(listIng);
   });
 }
@@ -138,7 +152,6 @@ function getNutritionFacts(queryParam) {
     headers: { "X-Api-Key": "6V6g3LwVQnMlDJmfDz23Mw==tbEtLG245HDEo7Cn" },
     contentType: "application/json",
     success: function (result) {
-      // console.log(result);
       for (i = 0; i < result.items.length; i++) {
         totalCal += result.items[i].calories;
         totalSugar += result.items[i].sugar_g;
@@ -152,9 +165,47 @@ function getNutritionFacts(queryParam) {
         totalSize += result.items[i].serving_size_g;
         totalSodium += result.items[i].sodium_mg;
       }
-      // console.log("Calories: " + totalCal.toFixed(1) + "kcal");
-      // console.log("Sugar: " + totalSugar.toFixed(1) + "g");
-      // console.log("Carbohydrates: " + totalCarb.toFixed(1) + "g");
+
+      const factors = [
+        totalCal.toFixed(1),
+        totalSugar.toFixed(1),
+        totalCarb.toFixed(1),
+        totalChol.toFixed(1),
+        totalFat.toFixed(1),
+        totalFiber.toFixed(1),
+        totalSize.toFixed(1),
+      ];
+
+      // console.log(factors);
+
+      factors.forEach((factor, index) => {
+        switch (index) {
+          case 0:
+            buildNutritionItem({ factor, title: "Calories", unit: "kcal" });
+            break;
+          case 1:
+            buildNutritionItem({ factor, title: "Sugar", unit: "g" });
+            break;
+          case 2:
+            buildNutritionItem({ factor, title: "Carbohydrates", unit: "g" });
+            break;
+          case 3:
+            buildNutritionItem({ factor, title: "Cholesterol", unit: "mg" });
+            break;
+          case 4:
+            buildNutritionItem({ factor, title: "Fat", unit: "g" });
+            break;
+          case 5:
+            buildNutritionItem({ factor, title: "Fibre", unit: "g" });
+            break;
+          case 6:
+            buildNutritionItem({ factor, title: "Serving Size", unit: "g" });
+            break;
+        }
+      });
+
+      console.log(nutritionItems);
+
       // console.log("Cholesterol: " + totalChol.toFixed(1) + "mg");
       // console.log("Saturated Fat: " + totalSat.toFixed(1) + "g");
       // console.log("Fat: " + totalFat.toFixed(1) + "g");

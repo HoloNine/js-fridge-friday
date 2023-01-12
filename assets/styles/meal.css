@@ -127,7 +127,10 @@
 }
 
 .nutrition-facts-list {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 24px;
+  gap: 24px;
 }
 
 .nutrition-item {

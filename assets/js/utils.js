@@ -58,13 +58,13 @@ const buildApiUrl = (props) => {
   }
 };
 
-// www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast,garlic,salt
-
 /**
  * @description render the hero image, title and text
  */
 const buildRandomMealHero = (props) => {
   const { idMeal, strMeal, strInstructions, strMealThumb } = props;
+  const method = "GET";
+  const url = buildApiUrl({ query: "lookup", value: idMeal });
 
   const strInstructionsSubstring = strInstructions.substring(0, 240);
 
@@ -82,6 +82,15 @@ const buildRandomMealHero = (props) => {
   heroTitle.text(strMeal);
   heroText.text(`${strInstructionsSubstring}...`);
   heroButton.attr("id", idMeal);
+
+  heroButton.on("click", (event) => {
+    // event.preventDefault();
+    $.ajax(url, method)
+      .then((response) => setSearchMeal(response.meals[0]))
+      .done(() => {
+        window.location.href = "./meal.html";
+      });
+  });
 };
 
 /**

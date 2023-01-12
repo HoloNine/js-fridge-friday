@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   mealIngredients.forEach((ingredient) => {
-    if (searchMeal[ingredient] !== null || searchMeal[ingredient] === "") {
-      console.log(searchMeal[ingredient]);
+    if (searchMeal[ingredient] !== null && searchMeal[ingredient] !== "") {
       const ingredientEl = $("<div>").addClass("ingredient");
       const spanEl = $("<span>").addClass("circle");
       const spanTextEl = $("<span>").addClass("text");
