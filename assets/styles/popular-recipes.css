@@ -92,11 +92,11 @@
 @media (min-width: 1280px) {
   .popular-recipes-wrapper {
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 1.5rem;
   }
 
   .popular-recipes-card {
-    width: 33.33%;
+    width: calc(33.33% - 1rem);
   }
 }
