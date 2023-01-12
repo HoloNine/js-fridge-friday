@@ -1,5 +1,7 @@
 # # :file_folder: js-fridge-friday
 
+![Screenshot](https://github.com/wisethee/js-fridge-friday/blob/feat/marius/assets/images/cover.jpg?raw=true)
+
 # Concept:
 
 Create a tool to help reduce food waste and save money by providing inspiration to use up ingredients left over at the end of the week.
