@@ -37,3 +37,27 @@
     justify-content: center;
     gap: 100px;
 }
+
+@media (min-width: 600px) {
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
