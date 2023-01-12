@@ -16,6 +16,7 @@ const getMeal = (ingredient) => {
 
   $.ajax({ url, method, success }).then((response) => {
     const { meals } = response;
+    setSearchHistory(meals);
   });
 };
 
