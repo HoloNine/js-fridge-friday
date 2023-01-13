@@ -3,6 +3,8 @@ const searchRecipeFormButton = $(".search-recipe-form-button");
 const popularRecipesWrapper = $(".popular-recipes-wrapper");
 const nutritionItems = $(".nutrition-facts-list");
 
+const error = $(".search-error");
+
 const buildNutritionItem = (props) => {
   const { factor, title, unit } = props;
 
@@ -31,6 +33,11 @@ const getMeal = (ingredient) => {
 
   $.ajax({ url, method, success }).then((response) => {
     const { meals } = response;
+    if (!meals) {
+      error
+        .addClass("show")
+        .text("The recipe you are looking for in not in our database!");
+    }
     setSearchHistory(meals);
   });
 };
@@ -71,7 +78,12 @@ const mealAPI = () => {
 
     // store input value in a constant that can be used later in our callback function
     const ingredient = searchRecipeFormInput.val();
-    if (!ingredient) return;
+    if (!ingredient) {
+      error
+        .addClass("show")
+        .text("Please enter an ingredient your search input is empty!");
+      return;
+    }
 
     // if the input form element returns a value then the function getMeal will be executed
     getMeal(ingredient);
