@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 96px 0px;
-  background: #211B18;
+  background: #211b18;
 }
 
 .search-recipe .container {
@@ -33,7 +33,6 @@
   width: 48%;
 }
 
-
 .search-recipe-form .form-group {
   display: flex;
   gap: 0;
@@ -50,7 +49,7 @@
   border-radius: 24px 0 0 24px;
   appearance: none;
   padding: 0;
-  background-color: #ECF3EA;
+  background-color: #ecf3ea;
   padding: 0 1rem;
   border: 2px solid transparent;
   transition: all ease 0.15s;
@@ -58,11 +57,11 @@
 
 .search-recipe-form .form-group .search-recipe-form-input:hover,
 .search-recipe-form .form-group .search-recipe-form-input:focus {
-  border: 2px solid #5D9D53;
+  border: 2px solid #5d9d53;
 }
 
 .search-recipe-form .form-group .search-recipe-form-button {
-  background-color: #5D9D53;
+  background-color: #5d9d53;
   color: #ffffff;
   padding: 0 1rem;
   border-radius: 0 24px 24px 0;
@@ -100,4 +99,15 @@
   .search-recipe-form {
     width: 100%;
   }
+}
+
+.search-error {
+  display: none;
+}
+
+.search-error.show {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #eb7165;
+  display: block;
 }
